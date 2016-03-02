@@ -1354,6 +1354,9 @@ int WaitDeviceArrival(int mode, unsigned char* msgToSend, unsigned int len)
 						else
 						{
 							printf("Error: Invalid card\n");
+							#ifdef LEDON
+	        					blink(RED, 2);
+							#endif /* LEDON */
 						}
 						
 
